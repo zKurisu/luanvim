@@ -47,12 +47,12 @@ vim.cmd [[
       \ "user/mdtitle.vim",
       \ ]
 
-function LoadFile(path, files) abort
+function! LoadVimscript(path, files) abort
     for file in a:files
         execute "source " . expand(a:path) . expand(file)
     endfor
 endfunction
 
-    call LoadFile(b:mypath, b:files)
+    call LoadVimscript(b:mypath, b:files)
 ]]
 

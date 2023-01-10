@@ -33,7 +33,7 @@ local mode = {
 
 local filetype = {
 	"filetype",
-	icons_enabled = false,
+	icons_enabled = true,
 	icon = nil,
 }
 
@@ -48,6 +48,11 @@ local location = {
 	padding = 0,
 }
 
+local filesize = {
+    "filesize",
+    icons_enabled = true,
+    icon = "✈ ✈ ︻デ═一 ✈ ✈ ",
+}
 -- cool function for progress
 local progress = function()
 	local current_line = vim.fn.line(".")
@@ -74,7 +79,7 @@ lualine.setup({
 	sections = {
 		lualine_a = { branch, diagnostics },
 		lualine_b = { mode },
-		lualine_c = {},
+		lualine_c = { filesize },
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
 		lualine_x = { diff, spaces, "encoding", filetype },
 		lualine_y = { location },

@@ -3,10 +3,13 @@ local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
   vim.notify("can not find plugin cmp-nvim")
   return
--- else 
---   print('cmp running ok')
 end
 
+local ultisnips_status_ok, cmp_ultisnips_mappings = pcall(require, "cmp_nvim_ultisnips.mappings")
+if not ultisnips_status_ok then
+    vim.notify("can not find cmp_nvim_ultisnips")
+    return
+end
 -- local snip_status_ok, luasnip = pcall(require, "luasnip")
 -- if not snip_status_ok then
 --   vim.notify("can not find the plugin luasnip")
@@ -66,12 +69,18 @@ cmp.setup{
     ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
     ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
     ["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-    ["<C-e>"] = cmp.mapping {
+    ["<C-a>"] = cmp.mapping {
       i = cmp.mapping.abort(),
       c = cmp.mapping.close(),
     },
     -- Accept currently selected item. If none selected, `select` first item.
     -- Set `select` to `false` to only confirm explicitly selected items.
+    ["<C-e>"] = cmp.mapping(
+      function(fallback)
+        cmp_ultisnips_mappings.compose { "expand" }(fallback)
+      end,
+      {"i","s",}
+    ),
     ["<CR>"] = cmp.mapping.confirm { select = true },
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
