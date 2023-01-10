@@ -45,12 +45,8 @@ keymap("n", "<LEADER>src", ":source $HOME/.config/nvim/init.lua<cr>", opts)
 keymap("n", "<LEADER>sc", ":source %<CR>", opts)
 
 -- Nvim-tree Navigate files
-keymap("n", "<C-e>", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<C-e>", ":vExplore<CR>", opts)
 
--- Telescope
-keymap("n", "<LEADER>ff", ":Telescope find_files<CR>", opts)
-keymap("n", "<LEADER>fp", ":Telescope projects<CR>", opts)
-keymap("n", "<LEADER>fm", ":Telescope marks<CR>", opts)
 
 -- Resize with arrows
 
@@ -60,8 +56,6 @@ keymap("n", "<M-l>", ":bnext<CR>", opts)
 keymap("n", "<M-d>", ":bdelete<CR>", opts)
 keymap("n", "<M-b>", ":new<CR>", opts)
 
--- formatting
-keymap("n", "<M-f>", ":lua vim.lsp.buf.formatting_sync()<CR>", opts)
 
 -- Move text up and down
 
