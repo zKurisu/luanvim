@@ -103,3 +103,16 @@ telescope.setup {
     }, 
   },
 }
+
+
+-- ==================== Keymappings ====================
+local opts = { noremap = true, silent = true }
+local opt_silent = { silent = true }
+
+local keymap = vim.api.nvim_set_keymap
+-- Telescope
+keymap("n", "<LEADER>ff", ":Telescope find_files<CR>", opts)
+keymap("n", "<LEADER>fp", ":Telescope projects<CR>", opts)
+keymap("n", "<LEADER>fm", ":Telescope marks<CR>", opts)
+keymap("n", "<LEADER>fa", ":Telescope live_grep<CR>", opts)
+keymap("n", "<LEADER>fc", ":Telescope current_buffer_fuzzy_find<CR>", opts)

@@ -8,7 +8,7 @@
 
 if &ft == "markdown" || &ft == "md"
     nnoremap <LEADER>ft :call Mdtitle()<CR>:copen<CR>
-    function Mdtitle() abort
+    function! Mdtitle() abort
         vimgrep /^\#\+/ %
     endfunction
 endif

@@ -1,4 +1,6 @@
 " ==================== Compile Function ====================
+let g:mkdp_browser = 'firefox'
+
 noremap <LEADER>rr :call CompileRunGcc()<CR>
 func! CompileRunGcc()
 	exec "w"
@@ -25,7 +27,7 @@ func! CompileRunGcc()
 		:res -5
 		term javac % && time java %<
 	elseif &filetype == 'sh'
-		:!time bash %
+		:!bash %
 	elseif &filetype == 'python'
 		set splitbelow
 		:sp
@@ -41,7 +43,7 @@ func! CompileRunGcc()
         :res -10
 		:term lua %
 	elseif &filetype == 'html'
-		silent! exec "!".g:mkdp_browser." % &"
+		silent! exec "!".g:mkdp_browser." %"
 	elseif &filetype == 'markdown'
 		exec "InstantMarkdownPreview"
 	elseif &filetype == 'tex'
@@ -63,5 +65,7 @@ func! CompileRunGcc()
 		set splitbelow
 		:sp
 		:term go run .
+	elseif &filetype == 'vim'
+		:source %
 	endif
 endfunc

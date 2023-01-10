@@ -44,13 +44,10 @@ keymap("n", "<LEADER>rc", ":vsplit $HOME/.config/nvim/init.lua<cr>", opts)
 keymap("n", "<LEADER>src", ":source $HOME/.config/nvim/init.lua<cr>", opts)
 keymap("n", "<LEADER>sc", ":source %<CR>", opts)
 
--- Nvim-tree Navigate files
-keymap("n", "<C-e>", ":NvimTreeToggle<CR>", opts)
+-- Jump to the next bracket 
+keymap("n", "{", "0N:nohlsearch<CR>f{", opts)
+keymap("n", "}", "/{<CR>:nohlsearch<CR>f{", opts)
 
--- Telescope
-keymap("n", "<LEADER>ff", ":Telescope find_files<CR>", opts)
-keymap("n", "<LEADER>fp", ":Telescope projects<CR>", opts)
-keymap("n", "<LEADER>fm", ":Telescope marks<CR>", opts)
 
 -- Resize with arrows
 
@@ -59,9 +56,6 @@ keymap("n", "<M-h>", ":bprevious<CR>", opts)
 keymap("n", "<M-l>", ":bnext<CR>", opts)
 keymap("n", "<M-d>", ":bdelete<CR>", opts)
 keymap("n", "<M-b>", ":new<CR>", opts)
-
--- formatting
-keymap("n", "<M-f>", ":lua vim.lsp.buf.formatting_sync()<CR>", opts)
 
 -- Move text up and down
 
@@ -75,6 +69,10 @@ keymap("i", "<>", "<><ESC>i", opt_silent)
 -- Stay in indent mode
 keymap("v", "H", "0", opt_silent)
 keymap("v", "L", "$", opt_silent)
+keymap("v", "J", "5j", opt_silent)
+keymap("v", "K", "5k", opt_silent)
+keymap("v", "B", "%", opt_silent)
+keymap("v", "s", '"+y', opt_silent)
 
 -- Move text up and down
 

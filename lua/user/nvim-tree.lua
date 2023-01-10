@@ -65,3 +65,12 @@ nvim_tree.setup {
     },
   },
 }
+
+-- ==================== Keymappings ====================
+-- Nvim-tree Navigate files
+local opts = { noremap = true, silent = true }
+local opt_silent = { silent = true }
+
+local keymap = vim.api.nvim_set_keymap
+
+keymap("n", "<C-e>", ":NvimTreeToggle<CR>", opts)

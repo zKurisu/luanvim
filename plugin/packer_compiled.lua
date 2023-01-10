@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/jie/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
+  ["auto-pairs"] = {
+    loaded = true,
+    path = "/home/jie/.local/share/nvim/site/pack/packer/start/auto-pairs",
+    url = "https://github.com/jiangmiao/auto-pairs"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/jie/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -154,6 +159,11 @@ _G.packer_plugins = {
     path = "/home/jie/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
+  ["lazygit.nvim"] = {
+    loaded = true,
+    path = "/home/jie/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
+    url = "https://github.com/kdheepak/lazygit.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/jie/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -188,11 +198,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jie/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
-  },
-  ["nvim-autopairs"] = {
-    loaded = true,
-    path = "/home/jie/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
-    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-bqf"] = {
     loaded = true,
@@ -289,6 +294,11 @@ _G.packer_plugins = {
     path = "/home/jie/.local/share/nvim/site/pack/packer/start/vim-illuminate",
     url = "https://github.com/RRethy/vim-illuminate"
   },
+  ["vim-markdown"] = {
+    loaded = true,
+    path = "/home/jie/.local/share/nvim/site/pack/packer/start/vim-markdown",
+    url = "https://github.com/preservim/vim-markdown"
+  },
   ["vim-mundo"] = {
     loaded = true,
     path = "/home/jie/.local/share/nvim/site/pack/packer/start/vim-mundo",
@@ -308,6 +318,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jie/.local/share/nvim/site/pack/packer/start/vim-table-mode",
     url = "https://github.com/dhruvasagar/vim-table-mode"
+  },
+  ["vimpad.nvim"] = {
+    loaded = true,
+    path = "/home/jie/.local/share/nvim/site/pack/packer/start/vimpad.nvim",
+    url = "https://github.com/yuki-uthman/vimpad.nvim"
+  },
+  vimspector = {
+    loaded = true,
+    path = "/home/jie/.local/share/nvim/site/pack/packer/start/vimspector",
+    url = "https://github.com/puremourning/vimspector"
   },
   ["vista.vim"] = {
     loaded = true,

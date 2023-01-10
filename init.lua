@@ -19,7 +19,7 @@ require "user.cmp"
 require "user.lsp"
 require "user.telescope"
 require "user.treesitter"
-require "user.autopairs"
+-- require "user.autopairs"
 require "user.comment"
 require "user.gitsigns"
 require "user.nvim-tree"
@@ -30,8 +30,13 @@ require "user.impatient"
 require "user.indentline"
 require "user.alpha"
 require "user.marks"
+-- require "user.nvim_notify"
+require "user.hop"
+-- require "user.nvim-dap"
+-- require "user.nvim-dap-ui"
 -- require "user.dashboard"
 -- require "user.whichkey"
+
 
 -- Plugins written or config by vimscript
 vim.cmd [[
@@ -41,18 +46,25 @@ vim.cmd [[
       \ "user/vim-table-mode.vim",
       \ "user/vim-mundo.vim",
       \ "user/filetype.vim",
+      \ "user/funcfold.vim",
       \ "user/run.vim",
       \ "user/chineseCount.vim",
       \ "user/mark.vim",
       \ "user/mdtitle.vim",
+      \ "user/vimspector.vim",
+      \ "user/debug.vim",
+      \ "user/lazygit.vim",
+      \ "user/vimpad.vim",
+      \ "user/distance.vim",
+      \ "user/trans.vim",
       \ ]
 
-function LoadFile(path, files) abort
+function! LoadVimscript(path, files) abort
     for file in a:files
         execute "source " . expand(a:path) . expand(file)
     endfor
 endfunction
 
-    call LoadFile(b:mypath, b:files)
+    call LoadVimscript(b:mypath, b:files)
 ]]
 

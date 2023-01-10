@@ -4,55 +4,55 @@ endsnippet
 
 snippet "sco?de?" "To write code in multiple lines" rb
 \`\`\`sh
-	$ $1
+$ $1
 \`\`\`
 $2
 endsnippet
 
 snippet "hco?de?" "To write code in multiple lines" rb
 \`\`\`html
-	$1
+$1
 \`\`\`
 $2
 endsnippet
 
 snippet "jco?de?" "To write code in multiple lines" rb
 \`\`\`js
-	$1
+$1
 \`\`\`
 $2
 endsnippet
 
 snippet "hco?de?" "To write code in multiple lines" rb
 \`\`\`html
-	$1
+$1
 \`\`\`
 $2
 endsnippet
 snippet "co?de?" "To write code in multiple lines" rb
 \`\`\`
-	$1
+$1
 \`\`\`
 $2
 endsnippet
 
 snippet "vco?de?" "To write code in multiple lines" rb
 \`\`\`vim
-	$1
+$1
 \`\`\`
 $2
 endsnippet
 
 snippet "qcd" "To write code in multiple lines" rb
 \`\`\`sql
-	$1
+$1
 \`\`\`
 $2
 endsnippet
 
 snippet "lcd" "To write code in multiple lines" rb
 \`\`\`lua
-	$1
+$1
 \`\`\`
 $2
 endsnippet
@@ -62,8 +62,13 @@ snippet link "To write the link part"
 endsnippet
 
 snippet "li?st?" "To write a list" rb
-  - $1
-  - $2
+- $1
+- $2
+endsnippet
+
+snippet "oli?st?" "To write a list" rb
+1. $1
+2. $2
 endsnippet
 
 snippet mt "To write LaTeX"
@@ -72,7 +77,10 @@ endsnippet
 
 snippet lmt "To write long LaTeX"
 `echo \$\$`
-\\displaylines{$1}
+\\displaylines
+{
+$1
+}
 `echo \$\$`
 endsnippet
 
@@ -112,7 +120,7 @@ endsnippet
 
 snippet pcd "Code of perl" 
 \`\`\`perl
-	$1
+$1
 \`\`\`
 $2
 endsnippet
@@ -131,7 +139,7 @@ endsnippet
 
 snippet ccd "C code" 
 \`\`\`c
-	$1
+$1
 \`\`\`
 $2
 endsnippet
@@ -169,15 +177,15 @@ snippet llabrep "Long labreport for physics"
 # Abstract
 - aim
 - physics principle
-- significat results
-- learn from exp
+- significant results
+- learn from experiment
 
 # Introduction
 - background
 - physical principle
 - objectives (aim)
 
-# Experimental procedure
+# Experimental procedure (Objective + Methodology)
 - list equipment
 - steps, paragraph structure
 
@@ -219,7 +227,7 @@ snippet do "LaTeX downarrow"
 endsnippet
 
 snippet case "LaTeX cases" 
-`echo -e "\n"`\begin{cases}
+\begin{cases}
 $1
 \end{cases}
 endsnippet
@@ -235,3 +243,14 @@ endsnippet
 snippet dg "LaTeX degree" 
 ${1:degrees}^\circ${2:minutes}^\prime$3
 endsnippet
+
+snippet ref "For IEEE net pic" 
+${1:name}, "${2:title}," ${3:web title}. (${4:M}. ${5:D}, ${6:Y}). Accessed: Feb. 18, 2023. [Online]. Available: ${7:link}
+endsnippet
+
+snippet ali "Aligned the equation" 
+\begin{aligned}
+$1
+\end{aligned}
+endsnippet
+
