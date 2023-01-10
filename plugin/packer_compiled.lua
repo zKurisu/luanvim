@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/jie/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
+  ["auto-pairs"] = {
+    loaded = true,
+    path = "/home/jie/.local/share/nvim/site/pack/packer/start/auto-pairs",
+    url = "https://github.com/jiangmiao/auto-pairs"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/jie/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -189,11 +194,6 @@ _G.packer_plugins = {
     path = "/home/jie/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
-  ["nvim-autopairs"] = {
-    loaded = true,
-    path = "/home/jie/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
-    url = "https://github.com/windwp/nvim-autopairs"
-  },
   ["nvim-bqf"] = {
     loaded = true,
     path = "/home/jie/.local/share/nvim/site/pack/packer/start/nvim-bqf",
@@ -208,6 +208,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jie/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-notify"] = {
+    loaded = true,
+    path = "/home/jie/.local/share/nvim/site/pack/packer/start/nvim-notify",
+    url = "https://github.com/rcarriga/nvim-notify"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -308,6 +313,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jie/.local/share/nvim/site/pack/packer/start/vim-table-mode",
     url = "https://github.com/dhruvasagar/vim-table-mode"
+  },
+  vimspector = {
+    loaded = true,
+    path = "/home/jie/.local/share/nvim/site/pack/packer/start/vimspector",
+    url = "https://github.com/puremourning/vimspector"
   },
   ["vista.vim"] = {
     loaded = true,

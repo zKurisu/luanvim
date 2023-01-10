@@ -66,13 +66,21 @@ snippet "li?st?" "To write a list" rb
   - $2
 endsnippet
 
+snippet "oli?st?" "To write a list" rb
+  1. $1
+  2. $2
+endsnippet
+
 snippet mt "To write LaTeX"
 `echo $`$1`echo $`
 endsnippet
 
 snippet lmt "To write long LaTeX"
 `echo \$\$`
-\\displaylines{$1}
+\\displaylines
+{
+$1
+}
 `echo \$\$`
 endsnippet
 

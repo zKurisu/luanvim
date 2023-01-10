@@ -6,8 +6,9 @@
 -- 2023-01-02
 --
 --
-vim.cmd "syntax on" 
+vim.cmd "syntax on"
 vim.cmd "set nowrap"
+-- vim.cmd "set guioptions+=r"     -- Adding scroll line on the right
 vim.cmd "let g:netrw_winsize = 30"
 
 
@@ -15,9 +16,10 @@ local options = {
     fileencodings = {'ucs-bom', 'utf-8', 'default', 'latin1'},
     foldlevel = 99,
 --    autoindent
-    ts = 4,
-    shiftwidth = 4,
-    expandtab = true,
+    tabstop = 4,        -- 每层缩排 4 列
+    shiftwidth = 4,     -- 内/外缩排为 4 列
+    expandtab = true,   -- 把所有制表符转换成空格
+    shiftround = true, -- 总是内/外缩排至最近的移位点
     hidden = true,
     undofile = true,
     undodir = '/home/jie/.local/share/nvim/undo',
@@ -35,9 +37,10 @@ local options = {
     smartcase = true,
     hlsearch = true,
     incsearch = true,
+--    textwidth = 78,     -- 代码行设置
+    mouse=a
 }
 
 for key, value in pairs(options) do
     vim.opt[key] = value
 end
-
